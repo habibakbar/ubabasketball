@@ -1,0 +1,429 @@
+/* Apply a natural box layout model to all elements. 
+Padding and border will not affect the width. */
+* { 
+ 	-moz-box-sizing: border-box; 
+ 	-webkit-box-sizing: border-box; 
+ 	box-sizing: border-box; 
+}
+
+
+body {
+	/* remove default spaces */
+	padding: 0;
+	margin: 0;
+	/* setting common type styles */
+	font-family: 'OpenSansLight', Arial, sans-serif;
+	color: #9db0ac;
+	background: #FFF;
+}
+/* remove defaults */
+h1, h2, h3 {
+	margin: 0;
+	font-weight: normal;
+}
+
+/* reset lists */
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+a {
+	/* override default styles */
+	text-decoration: none;
+	outline: none; /* removes dotted border from Firefox */
+	color: #9db0ac;
+}
+a:hover {
+	color: #d9a50c;
+}
+
+p {
+	margin: 0;
+}
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {}
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {}
+/* Landscape phones and down */
+@media (max-width: 480px) {}
+
+
+/*header styling*/
+/*org raps pic link*/
+/**/
+header {
+	background: url("https://assets-sports.vice.com/images/articles/meta/2014/07/14/the-raptors-try-to-make-the-leap-1405354058.jpg?crop=1xw:0.5807365439093485xh;0xw,0.13031161473087818xh&resize=1200:*&output-format=image/jpeg&output-quality=90") center no-repeat;
+	background-attachment:fixed;
+	background-size: cover;
+	width: 100%;
+	padding: 145px 315px;
+	text-align: center;
+	color: #000000;
+	/*margin-top: -60px;*/
+
+
+
+}
+
+header h1 {
+	width: 50%;
+	background: #000;
+	color: #FFF;
+	font-family: 'Oswald', sans-serif;
+	margin: 0 auto;
+	font-size: 100px;
+	
+}
+
+header h1:hover {
+	width: 50%;
+	-webkit-transform:rotate(20deg);
+	-o-transform:rotate(20deg);
+	transform:rotate(20deg);
+	/*-webkit-transform:scale(1.5);
+	-o-transform:scale(1.5);
+	transform:scale(1.5);*/
+}
+
+.twitterWidget{
+	margin-top: 20px;
+	float: left;
+	width: 50%;
+	padding-left: 200px;
+	
+}
+
+.fbWidget {
+	margin-top: 20px;
+	float: left;
+	width: 50%;
+	padding-right: 20px;
+}
+
+
+
+
+/*nav styling*/
+
+.clear {
+  clear: both;
+}
+
+.navigation {
+	background: #000;
+	position: fixed;
+	top: 0;
+	width: 100%;
+  	font-family: 'Roboto Condensed', sans-serif;
+  	font-size: 25px;
+  	list-style: none;
+  	padding: 0;
+  	margin: 0;
+  	text-align: center;
+  	z-index: 2;
+  	height: 60px;
+  	text-transform: uppercase;
+  	/*
+  	box-shadow:  0px -2px 3px -1px rgba(0, 0, 0, 1);
+  	*/	
+}
+
+.navigation li {
+  display: inline-block;
+}
+
+.navigation li:hover {
+  background: #000;
+}
+
+.navigation li a {
+  display: block;
+  padding: 7px 42px;
+  text-decoration: none;
+  line-height: 40px;
+  font-size: 20px;
+}
+
+.navigation li .unity {
+	font-size: 40px;
+}
+
+.navigation li a:hover {
+	color: #FFF;
+}
+
+.navigation li a.subMenu {
+	display: inline-block;	
+}
+
+.navigation ul {
+  display: none;
+  position: absolute;
+  list-style: none;
+  margin-left: -3px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navigation ul li {
+	display: block;
+  float: none;
+}
+
+.navigation li:hover ul {
+  display: block;
+  background: #000;
+}
+
+.navigation li li a:hover {
+  background: #000;
+}
+/*FORM styling*/
+
+.registration {
+	padding: 175px 175px;
+	text-align: center;
+	color: #000000;
+
+}
+
+.registration h2 {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 60px;
+	margin-top: -125px;
+}
+
+form.login {
+			border-top:1px solid white;
+			width:350px;
+			padding:10px;
+			margin:20px auto;
+			border-radius: 10px;
+			box-shadow:0 0 4px #000;
+			border:1px solid 1px #EEE;
+			color:#999;
+			font-size:11px;
+			text-shadow:0px 1px 0 white;
+			background: #eeeeee; /* Old browsers */
+			background: -moz-linear-gradient(top,  #eeeeee 0%, #cccccc 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* IE10+ */
+			background: linear-gradient(to bottom,  #eeeeee 0%,#cccccc 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+		}
+
+		form.login a {
+			color:#999;
+			text-decoration: none;
+		}
+
+		/* Set the input types on the username and password */
+		form.login input.username, form.login input.userpass {
+			width:100%;
+			padding:7px;
+			border:1px solid #CCC;
+			border-radius: 4px;
+			font-size:12px;
+			box-shadow:0 1px 0 #fff;
+		}
+
+		/* Disable the ouline and add a box shadow for when we are focused */
+		form.login input:focus {
+			box-shadow:0 0 4px #0099E0;
+			outline:0;
+		}
+
+		/* Overwrite the 100% width on the password input */
+		form.login input.userpass {
+			width:80%; /* 80% should be good enough */
+			margin-bottom:7px;
+		}
+
+		/* Style our submit button. We could also do input[type=submit] */
+		form.login input.sendButton {
+			border:1px solid #bada55;
+			border-radius: 4px;
+			margin-right: 30px;
+			text-align: center;
+			color:white;
+			padding:7px;
+			font-size:12px;
+			font-weight: 600;
+			text-shadow:0 -1px 0 #096EB3;
+
+			background: #499bea; /* Old browsers */
+			background: -moz-linear-gradient(top,  #499bea 0%, #207ce5 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#499bea), color-stop(100%,#207ce5)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,  #499bea 0%,#207ce5 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  #499bea 0%,#207ce5 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  #499bea 0%,#207ce5 100%); /* IE10+ */
+			background: #000
+		}
+
+		/*About Us styling*/
+
+		/*.about styling*/
+
+		.about {
+			background: #ececec;
+			margin-top: -120px;
+			padding: 20px 20px;
+			text-align: center;
+			/*border: 1px solid red;*/
+
+		}
+
+		.about h2 {
+			font-family: 'Roboto Condensed', sans-serif;
+			font-size: 60px;
+			color: #000;
+		}
+
+		.about p {
+			padding: 0 100px 0 100px;
+			margin: 20px 20px;
+		}
+
+		/*teams styling*/
+		.teams {
+			margin-top: 20px;
+			font-family: 'Roboto Condensed', sans-serif;
+			color: #000;
+			text-align: center;
+			/*border: 1px solid blue;*/
+		}
+
+		.teams h2 {
+			font-size: 60px;
+		}
+
+		.playerSearch {
+			text-align: center;
+		}
+
+		.conference {
+			width: 50%;
+			/*border: 1px solid green;*/
+			float: left;
+			font-size: 35px;
+			color: #000;
+			text-align: center;
+			padding: 30px;
+			word-spacing: 60px;
+
+		}
+
+		.order-table {
+			width: 100%;
+			margin-bottom: 35px;
+		}
+
+		.order-table .redTeam {
+			background: red;
+			color: #FFF;
+			padding: 5px;
+			text-transform: uppercase;
+			font-size: 40px;
+		}
+
+		.order-table .blueTeam {
+			background: lightblue;
+			color: blue;
+			padding: 5px;
+			text-transform: uppercase;
+			font-size: 40px;
+		}
+
+		.order-table .greenTeam {
+			background: green;
+			color: #FFF;
+			padding: 5px;
+			text-transform: uppercase;
+			font-size: 40px;
+		}
+
+		.conferenceTwo {
+			width: 50%;
+			/*border: 1px solid red;*/
+			float: right;
+			font-size: 35px;
+			color: #000;
+			text-align: center;
+			padding: 30px;
+
+		}
+
+		.order-table2 {
+			width: 100%;
+		}
+
+		.order-table2 .purpleTeam {
+			background: purple;
+			color: yellow;
+			padding: 5px;
+			text-transform: uppercase;
+			font-size: 40px;
+		}
+
+		.order-table2 .whiteTeam {
+			background: black;
+			color:#FFF;
+			padding: 5px;
+			text-transform: uppercase;
+			font-size: 40px;
+		}
+
+		.order-table2 .orangeTeam {
+			background: orange;
+			color: blue;
+			padding: 5px;
+			text-transform: uppercase;
+			font-size: 40px;
+		}
+
+		/*stats styling*/
+
+		.statsPage {
+			background: #ececec;
+			margin: 20px 20px;
+			clear: both;
+			border: 1px solid blue;	
+
+		}
+		.statsPage h2 {
+			font-family: 'Roboto Condensed', sans-serif;
+			font-size: 60px;
+			color: #000;
+			text-align: center;
+		}
+
+		/*Footer styling*/
+
+		.footer {
+			text-align: center;
+			padding: 20px 0 20px 0;
+			border: 1px solid red;
+			clear: both;
+			
+		}
+
+		.footer h2 {
+			font-family: 'Roboto Condensed', sans-serif;
+			font-size: 60px;
+			color: #000;
+			
+		}
+
+		.innerFooter {
+			width: 100%;
+			/*border: 1px solid blue;*/
+			display: inline-block;
+		}
+
+
+
+
